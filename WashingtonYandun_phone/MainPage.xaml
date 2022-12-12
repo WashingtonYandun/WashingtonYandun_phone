@@ -27,17 +27,33 @@
             </StackLayout>
             
             <!--dev-->
-            <StackLayout>
-                <FlexLayout>
+            <StackLayout
+                HorizontalOptions="Center">
+                <StackLayout>
                     <!--combo-->
-                    <StackLayout>
-                        
+                    <StackLayout
+                        x:Name="wy_picContainer"
+                        Margin="20,20,20,20">
+                        <Picker Title="Seleccione Operadora"
+                                x:Name="wy_picker">
+                            <Picker.Items>
+                                <x:String>Claro</x:String>
+                                <x:String>Tuenti</x:String>
+                                <x:String>Movistar</x:String>
+                                <x:String>Allegro</x:String>
+                                <x:String>Spring</x:String>
+                            </Picker.Items>
+                        </Picker>
                     </StackLayout>
-                    <!--button-->
-                    <StackLayout>
-                        
+
+                    <!--Creativity-->
+                    <StackLayout RadioButtonGroup.GroupName="wy_tarifas">
+                        <Label Text="What's your favorite color?" />
+                        <RadioButton Content="3" />
+                        <RadioButton Content="5" />
+                        <RadioButton Content="10" />
                     </StackLayout>
-                </FlexLayout>
+                </StackLayout>
             </StackLayout>
            
             
@@ -53,7 +69,6 @@
                 <Button
                     x:Name="wy_recharge"
                     Text="Recargar"
-                    SemanticProperties.Hint="Counts the number of times you click"
                     Clicked="OnCounterClicked"
                     HorizontalOptions="Center" />
             </StackLayout>
