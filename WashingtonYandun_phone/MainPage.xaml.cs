@@ -38,9 +38,20 @@ public partial class MainPage : ContentPage
 
     private void wy_change(object sender, CheckedChangedEventArgs e)
     {
-        //wy_result.Text = "Hola mundo";
-        //var s = sender.ToString();
+        if (wy_t3.IsChecked)
+        {
+            wy_result.Text = $"ha seleccionado una recarga {wy_t3.Value} de dolares";
+        }
 
+        if (wy_t5.IsChecked)
+        {
+            wy_result.Text = $"ha seleccionado una recarga {wy_t5.Value} de dolares";
+        }
+
+        if (wy_t10.IsChecked)
+        {
+            wy_result.Text = $"ha seleccionado una recarga {wy_t10.Value} de dolares";
+        }
     }
 }
 

@@ -50,10 +50,10 @@
                     <StackLayout
                         RadioButtonGroup.GroupName="wy_tarifas">
                         <Label
-                            Text="What's your favorite color?" />
-                        <RadioButton Content="3" CheckedChanged="wy_change"/>
-                        <RadioButton Content="5" CheckedChanged="wy_change"/>
-                        <RadioButton Content="10" CheckedChanged="wy_change"/>
+                            Text="Elija su tarifa" />
+                        <RadioButton x:Name="wy_t3" Value="3" Content="3" CheckedChanged="wy_change"/>
+                        <RadioButton x:Name="wy_t5" Value="5" Content="5" CheckedChanged="wy_change"/>
+                        <RadioButton x:Name="wy_t10" Value="10" Content="10" CheckedChanged="wy_change"/>
                     </StackLayout>
                 </StackLayout>
             </StackLayout>
@@ -63,7 +63,7 @@
             <StackLayout
                 x:Name="wy_resultContainer">
                 <Label
-                    Text=":"
+                    Text="Aun no seleciona recarga"
                     x:Name="wy_result"
                     FontSize="20"
                     HorizontalOptions="Center"
