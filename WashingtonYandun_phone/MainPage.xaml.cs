@@ -2,23 +2,45 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
 
-	public MainPage()
-	{
-		InitializeComponent();
+
+    public MainPage()
+    {
+        InitializeComponent();
     }
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+    private async void OnCounterClickedAsync(object sender, EventArgs e)
+    {
+        bool wy_answer = await DisplayAlert(
+            "Confirmacion",
+            "Quiere proceder con la recarga?",
+            "Si",
+            "No"
+            );
 
-		if (count == 1)
-			wy_recharge.Text = $"Clicked {count} time";
-		else
-            wy_recharge.Text = $"Clicked {count} times";
+        if (wy_answer)
+        {
+            await DisplayAlert(
+                "Listo!",
+                "Recarga exitosa",
+                "OK"
+                );
+        }
+        else
+        {
+            await DisplayAlert(
+                "Gracias!",
+                "No recarga",
+                "OK"
+                );
+        }
+    }
 
-		SemanticScreenReader.Announce(wy_recharge.Text);
-	}
+    private void wy_change(object sender, CheckedChangedEventArgs e)
+    {
+        //wy_result.Text = "Hola mundo";
+        //var s = sender.ToString();
+
+    }
 }
 

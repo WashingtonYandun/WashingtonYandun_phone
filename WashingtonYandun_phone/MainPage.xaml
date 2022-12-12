@@ -47,18 +47,21 @@
                     </StackLayout>
 
                     <!--Creativity-->
-                    <StackLayout RadioButtonGroup.GroupName="wy_tarifas">
-                        <Label Text="What's your favorite color?" />
-                        <RadioButton Content="3" />
-                        <RadioButton Content="5" />
-                        <RadioButton Content="10" />
+                    <StackLayout
+                        RadioButtonGroup.GroupName="wy_tarifas">
+                        <Label
+                            Text="What's your favorite color?" />
+                        <RadioButton Content="3" CheckedChanged="wy_change"/>
+                        <RadioButton Content="5" CheckedChanged="wy_change"/>
+                        <RadioButton Content="10" CheckedChanged="wy_change"/>
                     </StackLayout>
                 </StackLayout>
             </StackLayout>
            
             
             <!--result-->
-            <StackLayout>
+            <StackLayout
+                x:Name="wy_resultContainer">
                 <Label
                     Text=":"
                     x:Name="wy_result"
@@ -69,7 +72,7 @@
                 <Button
                     x:Name="wy_recharge"
                     Text="Recargar"
-                    Clicked="OnCounterClicked"
+                    Clicked="OnCounterClickedAsync"
                     HorizontalOptions="Center" />
             </StackLayout>
             
